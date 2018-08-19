@@ -11,7 +11,7 @@ import HTTPError from './HTTPError'
 
 // const host = getStorageValue('host') || config.tpApiHost || 'api'
 // const protocol = host === 'api' ? 'https:' : location.protocol
-const apiHost = 'https://api-demo.motiontailor.com/api/1.0'
+const apiHost = ''
 
 const throwOnError = response => {
   if (response.status >= 400) {

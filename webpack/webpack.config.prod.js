@@ -94,7 +94,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      title: 'MotionTailor',
+      title: 'AgileCalendar',
       template: 'webpack/template.html',
     }),
     new PreloadWebpackPlugin({
