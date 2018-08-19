@@ -1,0 +1,42 @@
+.panelWrap {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 100%;
+  background-color: #313643;
+  flex: 0 0 auto;
+}
+
+.panelHead {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.userThumbs {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userName {
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.2s;
+  font-weight: 300;
+  margin-left: 20px;
+  opacity: 0.9;
+  cursor: pointer;
+
+  &:hover {
+    color: #61dafb;
+  }
+}

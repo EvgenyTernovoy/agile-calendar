@@ -1,0 +1,20 @@
+.wrap {
+  max-width: 700px;
+}
+
+.titleInput {
+
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.goalTitle {
+  margin-bottom: 25px;
+}
+
+.goalSubTitle {
+  margin-bottom: 10px;
+}

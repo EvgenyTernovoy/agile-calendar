@@ -1,0 +1,233 @@
+:root {
+  --padding: 7px;
+}
+
+.slideNameEditable {
+  display: flex;
+  align-items: flex-start;
+}
+
+.nameEditable {
+  cursor: pointer;
+  display: inline-block;
+  padding-right: 16px;
+}
+
+.nameEditable:hover {
+  background: url('/icons/edit.svg') no-repeat 100% 35%;
+  background-size: 8px 8px;
+  color: var(--main-color);
+}
+
+.inputWrap {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.inputIcon {
+  height: 70%;
+  max-height: 13px;
+  position: absolute;
+  top: calc(50% - 5px);
+  transform: translateY(-50%);
+  right: 0;
+  fill: var(--main-color);
+  opacity: 0;
+}
+
+.inputWrap:hover .inputIcon,
+.inputWrap:focus .inputIcon {
+  opacity: 1;
+}
+
+.input {
+  font-size: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0;
+  padding-bottom: var(--padding);
+  display: block;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: -6px;
+  transition: all 0.33s;
+  min-width: 0;
+  max-height: 100%;
+  resize: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  direction: ltr;
+  overflow: hidden;
+}
+
+.input::placeholder {
+  color: #B0B7C9;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+}
+
+.input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--main-color);
+  cursor: text !important;
+}
+
+.inputWrap:hover .input:disabled {
+  color: inherit;
+  cursor: text;
+}
+
+.inputWrap:hover .input:disabled + .inputIcon {
+  opacity: 0;
+  cursor: default;
+}
+
+.inputWrap:hover .input {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.buffer {
+  white-space: pre;
+  max-width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  text-transform: uppercase;
+  padding-bottom: var(--padding);
+}
+
+textarea.input ~ .buffer {
+  white-space: normal;
+}
+
+/* Код для полей на странице загрузки шаблона */
+
+.inputWrapTemplateTitle .input,
+.inputWrapTemplateDesc .input {
+  color: var(--main-color);
+}
+
+.inputWrapTemplateTitle .input:focus,
+.inputWrapTemplateTitle .input:focus ~ .buffer {
+  min-width: 246px;
+}
+
+.inputWrapTemplateDesc .input:focus,
+.inputWrapTemplateDesc .input:focus ~ .buffer {
+  min-width: 160px;
+}
+
+.inputWrapTemplateDesc .buffer {
+  text-transform: none;
+}
+
+/* Код для поля с именем проекта в шапке */
+
+.headerName .input,
+.headerName .buffer {
+  color: #F3F7F9;
+  transition: all 0.2s;
+  text-overflow: ellipsis;
+  min-width: 153px;
+  font-size: 13px;
+}
+
+.headerName .input:hover,
+.headerName .input:focus {
+  color: #F3F7F9;
+  border-bottom-color: #F3F7F9;
+}
+
+.headerName .input:focus,
+.headerName .input:focus ~ .buffer {
+  max-width: 400px;
+}
+
+.headerName .input::placeholder {
+  color: #00E0FF;
+}
+
+.headerName .input::selection {
+  background: var(--main-color); /* WebKit/Blink Browsers */
+}
+
+.headerName .input:focus::placeholder {
+  opacity: 0;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.headerName .inputIcon {
+  fill: #fff;
+}
+
+.headerName .buffer {
+  text-transform: none;
+}
+
+/* Код для имени тимплейта */
+
+.templateName .input,
+.templateName .buffer {
+  color: #F3F7F9;
+  transition: all 0.2s;
+  text-overflow: ellipsis;
+  min-width: 153px;
+  max-width: 210px;
+  font-size: 13px;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.templateName .input:hover,
+.templateName .input:focus {
+  color: #00E0FF;
+  border-bottom-color: #00E0FF;
+}
+
+.templateName .input::placeholder {
+  color: #00E0FF;
+}
+
+.templateName .inputIcon {
+  right: 3px;
+  top:calc(50% - 5px);
+}
+
+.templateName .input:focus,
+.templateName .input:focus + .buffer {
+  max-width: 210px;
+}
+
+.templateName .input:focus::placeholder {
+  opacity: 0;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.templateName .inputIcon {
+  fill: #00E0FF;
+}
+
+.templateName .buffer {
+  text-transform: none;
+}

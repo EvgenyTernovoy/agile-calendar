@@ -1,0 +1,23 @@
+.sprintWrap {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 100%;
+}
+
+.sprintName {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.sprintHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.sprintDates {
+  display: flex;
+  margin-top: 15px;
+}
